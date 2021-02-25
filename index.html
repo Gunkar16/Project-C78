@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>My Family Book</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>My family Book</h1>
+    <img
+        id="original" src="https://images.penguinrandomhouse.com/cover/9781984815064">
+    <p id="NameText"></p>
+    <button id="NextButton" onclick="nextslide()">Next</button>
+  </body>
+  <script>
+    var Name=["Ravinder Singh","Rajwant Kaur","Gunjot Singh Johal","Gunkar Singh Johal"];
+
+var images=["https://img.freepik.com/free-vector/happy-father-s-day_24908-59789.jpg?size=338&ext=jpg","https://im6.ezgif.com/tmp/ezgif-6-7a91db7b7539.png","https://junkee.com/wp-content/uploads/2017/04/static1.squarespace.jpg"]
+
+var i=0;
+
+function nextslide(){
+  document.getElementById("NameText").innerHTML=Name[i];
+  
+  document.getElementById("original").src=images[i];
+  i++;
+  
+  if (i>=4){
+    i=0
+    document.getElementById("original").src="https://i.pinimg.com/originals/89/7e/54/897e54f6aa4f42b44ce66cdbc583145e.jpg";
+  }
+  
+  
+}
+  </script>
+  
+</html>
